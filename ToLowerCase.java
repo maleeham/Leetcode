@@ -10,7 +10,7 @@ class Solution {
         int delta = 'a' - 'A';
         for (int i = 0; i < chars.length; i++) {
             if (chars[i] >= 'A' && chars[i] <= 'Z') {
-                target[i] = (char) (chars[i] + delta);
+                target[i] = (char) (chars[i] + delta); //typecast
             } else {
                 target[i] = chars[i];
             }
