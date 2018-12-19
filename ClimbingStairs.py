@@ -10,7 +10,12 @@ class Solution:
         :type n: int
         :rtype: int
         """
-        a = b = 1
-        for _ in range(n):
-            a, b = b, a + b
-        return a
+        if(n==1):
+            return 1
+        dp=[None]* (n+1)
+        dp[1]=1
+        dp[2]=2
+        for i in range(3,n+1):
+            dp[i]=dp[i-1]+dp[i-2]
+        return dp[n]
+    
